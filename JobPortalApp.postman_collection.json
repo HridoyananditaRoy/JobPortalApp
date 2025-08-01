@@ -1,0 +1,601 @@
+{
+	"info": {
+		"_postman_id": "796517aa-66b9-48d0-adea-1659102c1f33",
+		"name": "JobPortalApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34163070"
+	},
+	"item": [
+		{
+			"name": "users/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODg2MDdiODRmYWQ3YjUyNWZlZTNmNyIsImlhdCI6MTc1Mzc2ODU5MywiZXhwIjoxNzUzODU0OTkzfQ.5inuMpJNZr6xpmNWAvBaO1cW3Ne7enbI-beoL6dionM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": " Shiva Lord",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sl@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "8878998900",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "Student",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/user/OneDrive/画像/Screenshots 1/Screenshot (1).png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n  \"email\": \"sl@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"role\": \"Student\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlMDRjOTA2YmVlZjc3YmVkYTdhYyIsImlhdCI6MTc1NDA2MzI5NSwiZXhwIjoxNzU0MTQ5Njk1fQ.eW9RloM2C-jcSTYWb2uh8rzOvFmMtPiunkwtNuS5I_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"fullName\": \"Roddur Updated\",\r\n  \"email\": \"sl@gmail.com\",\r\n  \"phoneNumber\": \"8878998900\",\r\n  \"bio\": \"Passionate full-stack developer\",\r\n  \"skills\": \"JavaScript,React,Node.js,MongoDB\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/user/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fullName",
+							"value": " Shiva Lord",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "sl@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "8878998900",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "Student",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/user/OneDrive/画像/Screenshots 1/Screenshot (1).png",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/user/JobPortal-Frontend/frontend/src/pics/Microsoft.jpg"
+						},
+						{
+							"key": "CompanyName",
+							"value": "wipro",
+							"type": "text"
+						},
+						{
+							"key": "desc",
+							"value": "Required a MERN Stack Developer.",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://account.wipro.com",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "jobType",
+							"value": "FullTime",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/company/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/company/get/688ceeb9aeca9b5549e5f604",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"company",
+						"get",
+						"688ceeb9aeca9b5549e5f604"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company/get/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/company/get/688ceeb9aeca9b5549e5f604",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"company",
+						"get",
+						"688ceeb9aeca9b5549e5f604"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Frontend Developer\",\r\n  \"desc\": \"React experience required\",\r\n  \"requirements\": \"2+ years of experience\",\r\n  \"salary\": \"60000\",\r\n  \"location\": \"Remote\",\r\n  \"numberOfPos\": 8,\r\n  \"experience\": 1,\r\n  \"jobType\": \"Software Engineer\",\r\n  \"companyId\": \"688ceeb9aeca9b5549e5f604\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/jobs/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/user/JobPortalApp/frontend/src/pics/Microsoft.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/jobs/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs/get/:id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/user/JobPortalApp/frontend/src/pics/Microsoft.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/jobs/get/6880cd28695c3361d7e2fdce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"get",
+						"6880cd28695c3361d7e2fdce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs/update/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Backend Developer\",\r\n  \"desc\": \"Node.js experience required\",\r\n  \"requirements\": \"2+ years of experience\",\r\n  \"salary\": \"60000\",\r\n  \"location\": \"Remote\",\r\n  \"numberOfPos\": 8,\r\n  \"experience\": 2,\r\n  \"jobType\": \"FullTime\",\r\n  \"companyId\": \"688ceeb9aeca9b5549e5f604\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/jobs/update/6880cd28695c3361d7e2fdce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jobs",
+						"update",
+						"6880cd28695c3361d7e2fdce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company/delete",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/company/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"company",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicants/apply/:id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/applicants/apply/6880cd28695c3361d7e2fdce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"applicants",
+						"apply",
+						"6880cd28695c3361d7e2fdce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicants/get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/applicants/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"applicants",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applicants/:id/applicants",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "applicants/status/:id/update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGNlOWQ3NjdhYWMxYTk4MGEwMDY5MCIsImlhdCI6MTc1NDA2NTM4MywiZXhwIjoxNzU0MTUxNzgzfQ.bFk1FyCOikx1O0ulOMk9i9v1loivyXJGDG8t2-BBj5w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"Accepted\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/applicants/status/688cfa1b229b0535064dcf9e/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"applicants",
+						"status",
+						"688cfa1b229b0535064dcf9e",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
