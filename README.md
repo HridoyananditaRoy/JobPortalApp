@@ -10,10 +10,8 @@ This repository contains the **backend** for a full-featured Job Portal system. 
 
 ## 🚀 Live API (Backend)
 
-🔗 [https://job-portal-backend.onrender.com](https://job-portal-backend.onrender.com) *(Replace with your actual link)*
-
 🧪 Test using Postman  
-📩 [Postman Collection (Optional)](./JobPortal.postman_collection.json)
+📩 [Postman Collection C:\Users\user\JobPortalApp\JobPortalApp.postman_collection.json]
 
 ---
 
@@ -57,7 +55,7 @@ This repository contains the **backend** for a full-featured Job Portal system. 
 | GET    | `/api/v1/jobs/get/:id`                | View job by ID                           |
 | PUT    | `/api/v1/jobs/update/:id`             | Update job info                          |
 | DELETE | `/api/v1/jobs/delete/:id`             | Delete job                               |
-| GET    | `/api/v1/applicant/apply/:id`         | Apply to job (job ID)                    |
+| POST    | `/api/v1/applicant/apply/:id`         | Apply to job (job ID)                    |
 | GET    | `/api/v1/applicant/get`               | Get jobs applied by user                 |
 | GET    | `/api/v1/applicant/:id/applicants`    | Get all applicants for a job             |
 | POST   | `/api/v1/applicant/status/:id/update` | Update application status                |
