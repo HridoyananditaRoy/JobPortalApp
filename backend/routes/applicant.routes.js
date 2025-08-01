@@ -5,7 +5,7 @@ const { applyJob, getApplicants, getAppliedJobs, updateStatus }
  
 const router = express.Router();
 
-router.route("/apply/:id").get(authenticatedUser, applyJob);
+router.route("/apply/:id").post(authenticatedUser, applyJob);
 router.route("/get").get(authenticatedUser, getAppliedJobs);
 router.route("/:id/applicants").get(authenticatedUser, getApplicants);
 router.route("/status/:id/update").post(authenticatedUser, updateStatus);

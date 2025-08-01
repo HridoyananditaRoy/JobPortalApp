@@ -3,6 +3,7 @@ const Application = require('../models/application.models');
 const jwt = require("jsonwebtoken");
 const cloudinary = require('../utils/cloudinary.js');
 const getDataUri = require('../utils/dataUri');
+const Job = require('../models/job.models');
 
  const applyJob = async (req, res) => {
     try {

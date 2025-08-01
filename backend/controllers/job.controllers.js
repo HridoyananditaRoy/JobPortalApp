@@ -132,119 +132,6 @@ const getJobsById = async (req, res) => {
 }
 
 
-//update a job
-// const updateJobs = async (req, res) => {
-//     try {
-//         const { id } = req.params; // make sure your route is /api/v1/jobs/update/:id
-//         //Extract from req.body
-//         const { title, desc, requirements, salary, location,
-//             numberOfPos, experience, jobType
-//         } = req.body;
-
-//         const updateFields =
-//         {
-//             title, desc, requirements, salary, location,
-//             numberOfPos, experience, jobType
-//         }
-
-//         const job = await Job.findById(id);
-//         if (!job) {
-//             return res.status(404).json({
-//                 msg: "Job Not Found!",
-//                 success: false
-//             });
-//         }
-
-//         // Ensure only the creator can update
-//         if (job.created_By.toString() !== req.id) {
-//             return res.status(403).json({
-//                 msg: "Unauthorized to update this job.",
-//                 success: false
-//             });
-//         }
-
-
-
-//         const updatedJob = await Job.findByIdAndUpdate(
-//             id,
-//             updateFields,
-//             // req.body,->Avoid Passing Entire req.body in Update
-//             //This is unsafe:
-//             { new: true } // returns the updated document
-//         );
-
-//         if (!updatedJob) {
-//             return res.status(404).json({
-//                 msg: "Job Not Found!",
-//                 success: false
-//             });
-//         }
-
-//             res.status(200).json({
-//                 msg: "Job updated successfully!",
-//                 success: true,
-//                 job: updatedJob
-//             });
-//         } catch (error) {
-//             console.error("Update job error:", error.message);
-//             res.status(500).json({
-//                 msg: "Something went wrong!",
-//                 success: false
-//             });
-//         }
-//     };
-
-// controllers/jobController.js
-// const updateJobs = async (req, res) => {
-//   try {
-//     const { id } = req.params;
-
-//     // ✅ Make sure req.id exists
-//     if (!req.id) {
-//       return res.status(401).json({ msg: "Unauthorized: No user ID" });
-//     }
-
-//     const job = await Job.findById(id);
-
-//     if (!job) {
-//       return res.status(404).json({ msg: "Job not found" });
-//     }
-
-//     // Check if job.user exists before calling toString
-// if (!job.user || job.user.toString() !== req.user.id) {
-//   return res.status(401).json({ success: false, message: "Not authorized to update this job" });
-// }
-
-
-//     // ✅ Update with provided fields only
-//     const updatedFields = {
-//       title: req.body.title || job.title,
-//       desc: req.body.desc || job.desc,
-//       requirements: req.body.requirements || job.requirements,
-//       salary: req.body.salary || job.salary,
-//       location: req.body.location || job.location,
-//       numberOfPos: req.body.numberOfPos || job.numberOfPos,
-//       experience: req.body.experience || job.experience,
-//       jobType: req.body.jobType || job.jobType,
-//     };
-
-//     const updatedJob = await Job.findByIdAndUpdate(id, updatedFields, { new: true });
-
-//     res.status(200).json({
-//       msg: "Job updated successfully!",
-//       success: true,
-//       job: updatedJob,
-//     });
-//   } catch (error) {
-//     console.error("Update error:", error);
-//     res.status(500).json({
-//       msg: "Failed to update job",
-//       success: false,
-//       error: error.message,
-//     });
-//   }
-// };
-
 
 const updateJobs = async (req, res) => {
   try {
@@ -255,12 +142,12 @@ const updateJobs = async (req, res) => {
     if (!job) return res.status(404).json({ msg: "Job not found" });
 
     // ✅ Safe access checks
-    if (!job.postedBy || !req.user || !req.user._id) {
+    if (!job.created_By || !req.user || !req.user._id) {
       return res.status(403).json({ msg: "Authorization data missing" });
     }
 
     // ✅ Authorization check
-    if (job.postedBy.toString() !== req.user._id.toString()) {
+    if (job.created_By.toString() !== req.user._id.toString()) {
       return res.status(403).json({ msg: "Not authorized to update this job" });
     }
 
